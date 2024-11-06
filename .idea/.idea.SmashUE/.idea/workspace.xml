@@ -10,7 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6107f52-88b5-455e-a516-7b5e01d2434b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Arenas/Map_Arena_Castle.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Arenas/Map_Arena_Castle.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Match/BP_GameMode_Match.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Match/BP_GameMode_Match.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Match/MatchGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Match/MatchGameMode.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Match/MatchGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Match/MatchGameMode.h" afterDir="false" />
     </list>
@@ -23,7 +26,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -36,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "C++ Project.SmashUE.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "work",
@@ -171,7 +175,7 @@
       <workItem from="1730824534024" duration="1230000" />
       <workItem from="1730826644816" duration="188000" />
       <workItem from="1730923273331" duration="474000" />
-      <workItem from="1730924362892" duration="474000" />
+      <workItem from="1730924362892" duration="1813000" />
     </task>
     <servers />
   </component>
