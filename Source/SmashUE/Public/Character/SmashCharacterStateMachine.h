@@ -6,6 +6,7 @@
 #include "UObject/Object.h"
 #include "SmashCharacterStateMachine.generated.h"
 
+enum class ESmashCharacterStateID : uint8;
 class ASmashCharacter;
 class USmashCharacterState;
 
@@ -22,11 +23,23 @@ public:
 
 	ASmashCharacter* GetCharacter() const;
 
+	UFUNCTION(BlueprintCallable)
+	void ChangeState(ESmashCharacterStateID NextStateID);
+
+	USmashCharacterState* GetState(ESmashCharacterStateID StateID);
+
 protected:
 	UPROPERTY()
 	TObjectPtr<ASmashCharacter> Character;
 
+	UPROPERTY()
 	TArray<USmashCharacterState*> AllStates;
+
+	UPROPERTY()
+	ESmashCharacterStateID CurrentStateID;
+
+	UPROPERTY()
+	TObjectPtr<USmashCharacterState> CurrentState;
 
 	void FindStates();
 

@@ -32,3 +32,13 @@ void USmashCharacterState::StateInit(USmashCharacterStateMachine* InStateMachine
 		FString::Printf(TEXT("Init State: %d"), GetStateID())
 	);
 }
+
+void USmashCharacterState::StateEnter(ESmashCharacterStateID PreviousStateID)
+{
+	
+}
+
+void USmashCharacterState::StateExit(ESmashCharacterStateID NextStateID)
+{
+	
+}
