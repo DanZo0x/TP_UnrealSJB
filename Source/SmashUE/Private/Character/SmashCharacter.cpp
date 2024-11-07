@@ -3,6 +3,8 @@
 
 #include "Character/SmashCharacter.h"
 
+#include "Character/SmashCharacterStateMachine.h"
+
 ASmashCharacter::ASmashCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -12,7 +14,9 @@ ASmashCharacter::ASmashCharacter()
 void ASmashCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	CreateStateMachine();
+
+	InitStateMachine();
 }
 
 void ASmashCharacter::Tick(float DeltaTime)
@@ -24,7 +28,6 @@ void ASmashCharacter::Tick(float DeltaTime)
 void ASmashCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
 
 float ASmashCharacter::GetOrient() const
@@ -42,5 +45,16 @@ void ASmashCharacter::RotateMeshUsingOrientX() const
 	FRotator Rotation = GetMesh()->GetRelativeRotation();
 	Rotation.Yaw = -90.0f * OrientX;
 	GetMesh()->SetRelativeRotation(Rotation);
+}
+
+void ASmashCharacter::CreateStateMachine()
+{
+	StateMachine = NewObject<USmashCharacterStateMachine>(this);
+}
+
+void ASmashCharacter::InitStateMachine()
+{
+	if (StateMachine == nullptr) return;
+	StateMachine->Init(this);
 }
 
