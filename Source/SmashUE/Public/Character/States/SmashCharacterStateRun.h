@@ -4,11 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "Character/SmashCharacterState.h"
-#include "SmashCharacterStateIdle.generated.h"
+#include "SmashCharacterStateRun.generated.h"
 
+class ASmashCharacter;
+class USmashCharacterStateMachine;
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
-class SMASHUE_API USmashCharacterStateIdle : public USmashCharacterState
+class SMASHUE_API USmashCharacterStateRun : public USmashCharacterState
 {
 	GENERATED_BODY()
 
@@ -24,8 +26,10 @@ public:
 #pragma region Animation
 
 protected:
-	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Idle")
-	UAnimMontage* IdleAnim;
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Run")
+	UAnimMontage* RunAnim;
 
-#pragma endregion
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Run")
+	float RunSpeed = 250.0f;
+#pragma  endregion
 };

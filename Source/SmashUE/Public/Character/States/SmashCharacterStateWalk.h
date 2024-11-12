@@ -18,4 +18,17 @@ public:
 	virtual void StateEnter(ESmashCharacterStateID PreviousStateID) override;
 
 	virtual void StateExit(ESmashCharacterStateID NextStateID) override;
+
+	virtual void StateTick(float DeltaTime) override;
+
+#pragma region Animation
+
+protected:
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Walk")
+	UAnimMontage* WalkAnim;
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Walk")
+	float WalkSpeed = 50.0f;
+
+#pragma endregion
 };
