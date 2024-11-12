@@ -4,6 +4,7 @@
 #include "../Public/Character/States/SmashCharacterStateIdle.h"
 
 #include "Character/SmashCharacter.h"
+#include "Character/SmashCharacterStateMachine.h"
 
 ESmashCharacterStateID USmashCharacterStateIdle::GetStateID()
 {
@@ -22,6 +23,11 @@ void USmashCharacterStateIdle::StateEnter(ESmashCharacterStateID PreviousStateID
 		FColor::Cyan,
 		TEXT("Enter StateIdle")
 	);
+
+	if (FMath::Abs(Character->GetInputX()) > 0.1f)
+	{
+		StateMachine->ChangeState(ESmashCharacterStateID::Walk);
+	}
 }
 
 void USmashCharacterStateIdle::StateExit(ESmashCharacterStateID NextStateID)

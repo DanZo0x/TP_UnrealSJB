@@ -10,28 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6107f52-88b5-455e-a516-7b5e01d2434b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacterSettings.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateRun.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Inputs/SmashCharacterInputData.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterSettings.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateRun.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Inputs/SmashCharacterInputData.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Characters/Jammus/BP_Character_Jammus.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Characters/Jammus/BP_Character_Jammus.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacterState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacterState.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacterStateMachine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacterStateMachine.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateIdle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateIdle.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateWalk.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateWalk.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Match/MatchGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Match/MatchGameMode.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterState.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterState.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterStateID.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterStateID.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterStateMachine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterStateMachine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateIdle.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateIdle.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateWalk.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateWalk.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Match/MatchGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Match/MatchGameMode.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +269,7 @@
       <workItem from="1730924362892" duration="3504000" />
       <workItem from="1730973643628" duration="9648000" />
       <workItem from="1731055047214" duration="6853000" />
-      <workItem from="1731399792165" duration="4719000" />
+      <workItem from="1731399792165" duration="5684000" />
     </task>
     <servers />
   </component>
