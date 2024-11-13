@@ -76,14 +76,21 @@ protected:
 
 #pragma region Input Move X
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInputMoveXEvent, float, InputMoveX);
+
 public:
 	float GetInputX();
+
+	UPROPERTY()
+	FInputMoveXEvent InputMoveXFastEvent;
 
 protected:
 	UPROPERTY()
 	float InputMoveX = 0.0f;
 
 private:
+	void OnInputMoveXFast(const FInputActionValue& InputActionValue);
+	
 	void BindInputMoveXAxisAndActions(UEnhancedInputComponent* EnhancedInputComponent);
 	
 	void OnInputMoveX(const FInputActionValue& InputActionValue);

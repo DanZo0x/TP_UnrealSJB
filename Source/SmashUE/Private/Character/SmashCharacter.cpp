@@ -92,18 +92,45 @@ float ASmashCharacter::GetInputX()
 	return InputMoveX;
 }
 
+void ASmashCharacter::OnInputMoveXFast(const FInputActionValue& InputActionValue)
+{
+	InputMoveX = InputActionValue.Get<float>();
+	InputMoveXFastEvent.Broadcast(InputMoveX);
+}
+
 void ASmashCharacter::BindInputMoveXAxisAndActions(UEnhancedInputComponent* EnhancedInputComponent)
 {
 	if (InputData == nullptr) return;
 
-	if (InputData->InputActionMoveX)
+	if(InputData->InputActionMoveX)
 	{
 		EnhancedInputComponent->BindAction(
 			InputData->InputActionMoveX,
 			ETriggerEvent::Started,
 			this,
 			&ASmashCharacter::OnInputMoveX
+			);
+		EnhancedInputComponent->BindAction(
+			InputData->InputActionMoveX,
+			ETriggerEvent::Completed,
+			this,
+			&ASmashCharacter::OnInputMoveX
+			);
+		EnhancedInputComponent->BindAction(
+			InputData->InputActionMoveX,
+			ETriggerEvent::Triggered,
+			this,
+			&ASmashCharacter::OnInputMoveX
 		);
+	}
+
+	if (InputData->InputActionMoveXFast)
+	{
+		EnhancedInputComponent->BindAction(
+			InputData->InputActionMoveXFast,
+			ETriggerEvent::Triggered,
+			this,
+			&ASmashCharacter::OnInputMoveXFast);
 	}
 }
 

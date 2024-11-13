@@ -5,6 +5,7 @@
 
 #include "Character/SmashCharacter.h"
 #include "Character/SmashCharacterStateMachine.h"
+#include "Character/SmashCharacterSettings.h"
 
 ESmashCharacterStateID USmashCharacterStateWalk::GetStateID()
 {
@@ -17,34 +18,38 @@ void USmashCharacterStateWalk::StateEnter(ESmashCharacterStateID PreviousStateID
 
 	Character->PlayAnimMontage(WalkAnim);
 
-	GEngine->AddOnScreenDebugMessage(
+	Character->InputMoveXFastEvent.AddDynamic(this, &USmashCharacterStateWalk::OnInputMoveXFast);
+
+	/*GEngine->AddOnScreenDebugMessage(
 		-1,
 		3.0f,
 		FColor::Cyan,
 		TEXT("Enter StateWalk")
-	);
+	);*/
 }
 
 void USmashCharacterStateWalk::StateExit(ESmashCharacterStateID NextStateID)
 {
 	Super::StateExit(NextStateID);
 
-	GEngine->AddOnScreenDebugMessage(
+	Character->InputMoveXFastEvent.RemoveDynamic(this, &USmashCharacterStateWalk::OnInputMoveXFast);
+
+	/*GEngine->AddOnScreenDebugMessage(
 		-1,
 		3.0f,
 		FColor::Red,
 		TEXT("Exit StateWalk")
-	);
+	);*/
 }
 
 void USmashCharacterStateWalk::StateTick(float DeltaTime)
 {
 	Super::StateTick(DeltaTime);
+	
+	const USmashCharacterSettings* SmashCharacterSettings = GetDefault<USmashCharacterSettings>();
+	if (SmashCharacterSettings == nullptr) return;
 
-	USmashCharacterSettings* CharacterSettings = Cast<USmashCharacterSettings>(Character);
-	if (CharacterSettings == nullptr) return;
-
-	if (FMath::Abs(Character->GetInputX()) < 0.1f)
+	if (FMath::Abs(Character->GetInputX()) < SmashCharacterSettings->InputMoveXThreshold)
 	{
 		StateMachine->ChangeState(ESmashCharacterStateID::Idle);
 	}
@@ -57,4 +62,9 @@ void USmashCharacterStateWalk::StateTick(float DeltaTime)
 			Character->AddMovementInput(FVector::ForwardVector, Character->GetOrient());
 		}
 	}
+}
+
+void USmashCharacterStateWalk::OnInputMoveXFast(float InputMoveX)
+{
+	StateMachine->ChangeState(ESmashCharacterStateID::Run);
 }

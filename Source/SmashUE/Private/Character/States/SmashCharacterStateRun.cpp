@@ -4,6 +4,7 @@
 #include "Character/States/SmashCharacterStateRun.h"
 
 #include "Character/SmashCharacter.h"
+#include "Character/SmashCharacterStateMachine.h"
 
 ESmashCharacterStateID USmashCharacterStateRun::GetStateID()
 {
@@ -40,8 +41,16 @@ void USmashCharacterStateRun::StateTick(float DeltaTime)
 {
 	Super::StateTick(DeltaTime);
 
-	if (Character->GetVelocity().X < RunSpeed)
+	const USmashCharacterSettings* SmashCharacterSettings = GetDefault<USmashCharacterSettings>();
+	if (SmashCharacterSettings == nullptr) return;
+
+	if (FMath::Abs(Character->GetInputX()) < SmashCharacterSettings->InputMoveXThreshold)
 	{
-		Character->AddMovementInput(FVector(RunSpeed, 0, 0), 1);
+		StateMachine->ChangeState(ESmashCharacterStateID::Idle);
+	}
+	else
+	{
+		Character->SetOrientX(Character->GetInputX());
+		Character->AddMovementInput(FVector::ForwardVector, Character->GetOrient());
 	}
 }
