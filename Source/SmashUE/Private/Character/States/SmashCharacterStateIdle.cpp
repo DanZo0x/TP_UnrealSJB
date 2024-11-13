@@ -23,11 +23,6 @@ void USmashCharacterStateIdle::StateEnter(ESmashCharacterStateID PreviousStateID
 		FColor::Cyan,
 		TEXT("Enter StateIdle")
 	);
-
-	if (FMath::Abs(Character->GetInputX()) > 0.1f)
-	{
-		StateMachine->ChangeState(ESmashCharacterStateID::Walk);
-	}
 }
 
 void USmashCharacterStateIdle::StateExit(ESmashCharacterStateID NextStateID)
@@ -52,4 +47,9 @@ void USmashCharacterStateIdle::StateTick(float DeltaTime)
 		FColor::Green,
 		TEXT("Tick StateIdle")
 	);*/
+
+	if (FMath::Abs(Character->GetInputX()) > 0.1f)
+	{
+		StateMachine->ChangeState(ESmashCharacterStateID::Walk);
+	}
 }

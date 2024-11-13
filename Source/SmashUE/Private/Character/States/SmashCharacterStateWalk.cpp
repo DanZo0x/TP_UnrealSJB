@@ -41,6 +41,9 @@ void USmashCharacterStateWalk::StateTick(float DeltaTime)
 {
 	Super::StateTick(DeltaTime);
 
+	USmashCharacterSettings* CharacterSettings = Cast<USmashCharacterSettings>(Character);
+	if (CharacterSettings == nullptr) return;
+
 	if (FMath::Abs(Character->GetInputX()) < 0.1f)
 	{
 		StateMachine->ChangeState(ESmashCharacterStateID::Idle);
