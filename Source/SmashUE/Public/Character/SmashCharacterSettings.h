@@ -25,4 +25,7 @@ public:
 
 	UPROPERTY(Config, EditAnywhere, Category = "Inputs", meta = (UIMin = "0.0", UIMax = "1.0"))
 	float InputMoveXThreshold = 0.1f;
+
+	UPROPERTY(Config, EditAnywhere, Category = "Inputs", meta = (UIMin = "0.0", UIMax = "1.0"))
+	float InputMoveYThreshold = 0.1f;
 };

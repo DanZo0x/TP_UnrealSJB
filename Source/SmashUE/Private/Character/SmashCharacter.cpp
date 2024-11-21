@@ -6,6 +6,7 @@
 #include "Character/SmashCharacterStateMachine.h"
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
+#include "Character/SmashCharacterStateID.h"
 
 ASmashCharacter::ASmashCharacter()
 {
@@ -130,11 +131,33 @@ void ASmashCharacter::BindInputMoveXAxisAndActions(UEnhancedInputComponent* Enha
 			InputData->InputActionMoveXFast,
 			ETriggerEvent::Triggered,
 			this,
-			&ASmashCharacter::OnInputMoveXFast);
+			&ASmashCharacter::OnInputMoveXFast
+		);
+	}
+
+	if (InputData->InputActionJump)
+	{
+		EnhancedInputComponent->BindAction(
+			InputData->InputActionJump,
+			ETriggerEvent::Triggered,
+			this,
+			&ASmashCharacter::OnInputJump
+		);
 	}
 }
 
 void ASmashCharacter::OnInputMoveX(const FInputActionValue& InputActionValue)
 {
 	InputMoveX = InputActionValue.Get<float>();
+}
+
+float ASmashCharacter::GetInputY() const
+{
+	return InputMoveY;
+}
+
+void ASmashCharacter::OnInputJump(const FInputActionValue& InputActionValue)
+{
+	InputMoveY = InputActionValue.Get<float>();
+	InputMoveYPressEvent.Broadcast(InputMoveY);
 }

@@ -19,13 +19,7 @@ void USmashCharacterStateWalk::StateEnter(ESmashCharacterStateID PreviousStateID
 	Character->PlayAnimMontage(WalkAnim);
 
 	Character->InputMoveXFastEvent.AddDynamic(this, &USmashCharacterStateWalk::OnInputMoveXFast);
-
-	/*GEngine->AddOnScreenDebugMessage(
-		-1,
-		3.0f,
-		FColor::Cyan,
-		TEXT("Enter StateWalk")
-	);*/
+	Character->InputMoveYPressEvent.AddDynamic(this, &USmashCharacterStateWalk::OnInputJump);
 }
 
 void USmashCharacterStateWalk::StateExit(ESmashCharacterStateID NextStateID)
@@ -33,13 +27,7 @@ void USmashCharacterStateWalk::StateExit(ESmashCharacterStateID NextStateID)
 	Super::StateExit(NextStateID);
 
 	Character->InputMoveXFastEvent.RemoveDynamic(this, &USmashCharacterStateWalk::OnInputMoveXFast);
-
-	/*GEngine->AddOnScreenDebugMessage(
-		-1,
-		3.0f,
-		FColor::Red,
-		TEXT("Exit StateWalk")
-	);*/
+	Character->InputMoveYPressEvent.RemoveDynamic(this, &USmashCharacterStateWalk::OnInputJump);
 }
 
 void USmashCharacterStateWalk::StateTick(float DeltaTime)
@@ -67,4 +55,9 @@ void USmashCharacterStateWalk::StateTick(float DeltaTime)
 void USmashCharacterStateWalk::OnInputMoveXFast(float InputMoveX)
 {
 	StateMachine->ChangeState(ESmashCharacterStateID::Run);
+}
+
+void USmashCharacterStateWalk::OnInputJump(float InputMoveY)
+{
+	StateMachine->ChangeState(ESmashCharacterStateID::Jump);
 }

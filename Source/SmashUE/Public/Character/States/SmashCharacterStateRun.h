@@ -23,6 +23,9 @@ public:
 
 	virtual void StateTick(float DeltaTime) override;
 
+	UFUNCTION()
+	void OnInputJump(float InputMoveY);
+
 #pragma region Animation
 
 protected:

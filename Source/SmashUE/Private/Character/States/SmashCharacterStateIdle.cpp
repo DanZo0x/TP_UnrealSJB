@@ -5,7 +5,6 @@
 
 #include "Character/SmashCharacter.h"
 #include "Character/SmashCharacterStateMachine.h"
-#include "GameFramework/CharacterMovementComponent.h"
 
 ESmashCharacterStateID USmashCharacterStateIdle::GetStateID()
 {
@@ -19,27 +18,15 @@ void USmashCharacterStateIdle::StateEnter(ESmashCharacterStateID PreviousStateID
 	Character->PlayAnimMontage(IdleAnim);
 
 	Character->InputMoveXFastEvent.AddDynamic(this, &USmashCharacterStateIdle::OnInputMoveXFast);
-
-	/*GEngine->AddOnScreenDebugMessage(
-		-1,
-		3.0f,
-		FColor::Cyan,
-		TEXT("Enter StateIdle")
-	);*/
+	Character->InputMoveYPressEvent.AddDynamic(this, &USmashCharacterStateIdle::OnInputJump);
 }
 
 void USmashCharacterStateIdle::StateExit(ESmashCharacterStateID NextStateID)
 {
 	Super::StateExit(NextStateID);
 
-	/*GEngine->AddOnScreenDebugMessage(
-		-1,
-		3.0f,
-		FColor::Red,
-		TEXT("Exit StateIdle")
-	);*/
-
 	Character->InputMoveXFastEvent.RemoveDynamic(this, &USmashCharacterStateIdle::OnInputMoveXFast);
+	Character->InputMoveYPressEvent.RemoveDynamic(this, &USmashCharacterStateIdle::OnInputJump);
 }
 
 void USmashCharacterStateIdle::StateTick(float DeltaTime)
@@ -53,16 +40,14 @@ void USmashCharacterStateIdle::StateTick(float DeltaTime)
 	{
 		StateMachine->ChangeState(ESmashCharacterStateID::Walk);
 	}
-	
-	/*GEngine->AddOnScreenDebugMessage(
-		-1,
-		3.0f,
-		FColor::Green,
-		TEXT("Tick StateIdle")
-	);*/
 }
 
 void USmashCharacterStateIdle::OnInputMoveXFast(float InputMoveX)
 {
 	StateMachine->ChangeState(ESmashCharacterStateID::Run);
+}
+
+void USmashCharacterStateIdle::OnInputJump(float InputMoveY)
+{
+	StateMachine->ChangeState(ESmashCharacterStateID::Jump);
 }

@@ -10,16 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6107f52-88b5-455e-a516-7b5e01d2434b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateFall.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateJump.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateFall.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateJump.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/SmashUE/Characters/Common/Inputs/DA_Characters_InputData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Characters/Common/Inputs/DA_Characters_InputData.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Characters/Jammus/BP_Character_Jammus.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Characters/Jammus/BP_Character_Jammus.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateIdle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateIdle.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateRun.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateRun.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateWalk.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateWalk.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Inputs/InputTriggerDoubleTap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Inputs/InputTriggerDoubleTap.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Inputs/InputTriggerPressedFast.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Inputs/InputTriggerPressedFast.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterSettings.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterSettings.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterStateID.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacterStateID.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateIdle.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateIdle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateRun.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateRun.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateWalk.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateWalk.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Inputs/SmashCharacterInputData.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Inputs/SmashCharacterInputData.h" afterDir="false" />
     </list>
@@ -32,6 +38,32 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.3/Engine/Plugins/AI/MLAdapter/Source/MLAdapter/Private/Actuators/MLAdapterActuator_EnhancedInput.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -193,6 +225,8 @@
       <workItem from="1731055047214" duration="6853000" />
       <workItem from="1731399792165" duration="9310000" />
       <workItem from="1731489705197" duration="6132000" />
+      <workItem from="1731950053501" duration="2140000" />
+      <workItem from="1732178283049" duration="8067000" />
     </task>
     <servers />
   </component>
