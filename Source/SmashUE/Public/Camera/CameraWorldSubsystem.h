@@ -12,6 +12,8 @@ class SMASHUE_API UCameraWorldSubsystem : public UTickableWorldSubsystem
 {
 	GENERATED_BODY()
 
+#pragma region Subsystem Overrides
+	
 public:
 	virtual void PostInitialize() override;
 
@@ -21,16 +23,29 @@ public:
 
 	virtual TStatId GetStatId() const override { return TStatId(); }
 
+#pragma endregion
+
+#pragma region Follow Targets
+
 	void AddFollowTarget(UObject* FollowTarget);
 
 	void RemoveFollowTarget(UObject* FollowTarget);
 
+	UPROPERTY()
+	TArray<UObject*> FollowTargets;
+
+#pragma endregion
+
+#pragma region Main Camera
 protected:
 	UPROPERTY()
 	TObjectPtr<UCameraComponent> CameraMain;
 
-	UPROPERTY()
-	TArray<UObject*> FollowTargets;
+	UCameraComponent* FindCameraByTag(const FName& Tag) const;
+
+#pragma endregion
+
+#pragma region Misc
 
 	UPROPERTY(EditAnywhere)
 	float CameraLerpSpeed = 5.0f;
@@ -39,5 +54,28 @@ protected:
 
 	FVector CalculateAveragePositionBetweenTargets();
 
-	UCameraComponent* FindCameraByTag(const FName& Tag) const;
+#pragma endregion
+
+#pragma region Bounds
+
+protected:
+	UPROPERTY()
+	FVector2D CameraBoundsMin;
+	
+	UPROPERTY()
+	FVector2D CameraBoundsMax;
+
+	UPROPERTY()
+	float CameraBoundsYProjectionCenter;
+
+	AActor* FindCameraBoundsActor();
+
+	void InitCameraBounds(AActor* CameraBoundsActor);
+
+	void ClampPositionIntoCameraBounds(FVector& Position);
+
+	void GetViewportBounds(FVector2D& OutViewportBoundsMin, FVector2D& OutViewportBoundsMax);
+
+	FVector CalculateWorldPositionFromViewportPosition(const FVector2D& ViewportPosition);
+	
 };
