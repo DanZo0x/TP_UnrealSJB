@@ -26,12 +26,9 @@ public:
 	UFUNCTION()
 	void OnInputJump(float InputMoveY);
 
-#pragma region Animation
+#pragma region Run Variables
 
 protected:
-	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Run")
-	UAnimMontage* RunAnim;
-
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Run")
 	float RunSpeed = 250.0f;
 #pragma  endregion

@@ -21,12 +21,9 @@ public:
 
 	virtual void StateTick(float DeltaTime) override;
 
-#pragma region Animation
+#pragma region Jump Variables
 
 protected:
-	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Jump")
-	UAnimMontage* JumpAnim;
-
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Jump")
 	float JumpWalkSpeed = 400.0f;
 

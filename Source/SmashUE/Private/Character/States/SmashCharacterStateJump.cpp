@@ -17,7 +17,6 @@ void USmashCharacterStateJump::StateEnter(ESmashCharacterStateID PreviousStateID
 	Super::StateEnter(PreviousStateID);
 	
 	Character->Jump();
-	Character->PlayAnimMontage(JumpAnim);
 }
 
 void USmashCharacterStateJump::StateExit(ESmashCharacterStateID NextStateID)

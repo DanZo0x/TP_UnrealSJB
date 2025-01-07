@@ -15,8 +15,6 @@ void USmashCharacterStateRun::StateEnter(ESmashCharacterStateID PreviousStateID)
 {
 	Super::StateEnter(PreviousStateID);
 
-	Character->PlayAnimMontage(RunAnim);
-
 	Character->InputMoveYPressEvent.AddDynamic(this, &USmashCharacterStateRun::OnInputJump);
 }
 

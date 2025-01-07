@@ -27,12 +27,9 @@ public:
 	UFUNCTION()
 	void OnInputJump(float InputMoveY);
 
-#pragma region Animation
+#pragma region Walk Variables
 
 protected:
-	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Walk")
-	UAnimMontage* WalkAnim;
-
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Walk")
 	float WalkSpeed = 50.0f;
 

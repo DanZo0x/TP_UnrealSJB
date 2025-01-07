@@ -34,4 +34,7 @@ protected:
 
 	UPROPERTY()
 	TObjectPtr<USmashCharacterStateMachine> StateMachine;
+	
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Animation")
+	UAnimMontage* AnimMontage;
 };

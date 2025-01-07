@@ -15,8 +15,6 @@ void USmashCharacterStateIdle::StateEnter(ESmashCharacterStateID PreviousStateID
 {
 	Super::StateEnter(PreviousStateID);
 
-	Character->PlayAnimMontage(IdleAnim);
-
 	Character->InputMoveXFastEvent.AddDynamic(this, &USmashCharacterStateIdle::OnInputMoveXFast);
 	Character->InputMoveYPressEvent.AddDynamic(this, &USmashCharacterStateIdle::OnInputJump);
 }

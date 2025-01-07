@@ -26,12 +26,4 @@ public:
 
 	UFUNCTION()
 	void OnInputJump(float InputMoveY);
-
-#pragma region Animation
-
-protected:
-	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Idle")
-	UAnimMontage* IdleAnim;
-
-#pragma endregion
 };
