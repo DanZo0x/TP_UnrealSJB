@@ -20,10 +20,12 @@ public:
 	virtual void StateExit(ESmashCharacterStateID NextStateID) override;
 
 	virtual void StateTick(float DeltaTime) override;
-
+	
 #pragma region Jump Variables
 
 protected:
+	void Jump(float inJumpWalkSpeed, float inMaxHeight, float inJumpDuration, float inJumpAirControl) const;
+
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Jump")
 	float JumpWalkSpeed = 400.0f;
 

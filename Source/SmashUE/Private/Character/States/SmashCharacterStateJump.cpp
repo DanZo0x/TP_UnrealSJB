@@ -6,6 +6,7 @@
 #include "Character/SmashCharacter.h"
 #include "Character/SmashCharacterSettings.h"
 #include "Character/SmashCharacterStateMachine.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 ESmashCharacterStateID USmashCharacterStateJump::GetStateID()
 {
@@ -16,7 +17,7 @@ void USmashCharacterStateJump::StateEnter(ESmashCharacterStateID PreviousStateID
 {
 	Super::StateEnter(PreviousStateID);
 	
-	Character->Jump();
+	Jump(JumpWalkSpeed, MaxHeight, JumpDuration, JumpAirControl);
 }
 
 void USmashCharacterStateJump::StateExit(ESmashCharacterStateID NextStateID)
@@ -35,4 +36,17 @@ void USmashCharacterStateJump::StateTick(float DeltaTime)
 	{
 		StateMachine->ChangeState(ESmashCharacterStateID::Fall);
 	}
+}
+
+void USmashCharacterStateJump::Jump(float inJumpWalkSpeed, float inMaxHeight, float inJumpDuration, float inJumpAirControl) const
+{
+	const float JumpVelocity = (2.0f * inMaxHeight) / inJumpDuration;
+
+	if (UCharacterMovementComponent* MovementComponent = Character->GetCharacterMovement())
+	{
+		MovementComponent->MaxWalkSpeed = inJumpWalkSpeed;
+		MovementComponent->AirControl = inJumpAirControl;
+	}
+
+	Character->LaunchCharacter(FVector(0.f, 0.f, JumpVelocity), false, true);
 }
