@@ -7,6 +7,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
 #include "Character/SmashCharacterStateID.h"
+#include "Camera/CameraWorldSubsystem.h"
 
 ASmashCharacter::ASmashCharacter()
 {
@@ -16,9 +17,14 @@ ASmashCharacter::ASmashCharacter()
 void ASmashCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	
 	CreateStateMachine();
-
 	InitStateMachine();
+
+	UWorld* World = GEngine->GetWorldFromContextObjectChecked(this);
+	if (!IsValid(World)) return;
+
+	World->GetSubsystem<UCameraWorldSubsystem>()->AddFollowTarget(this);
 }
 
 void ASmashCharacter::Tick(float DeltaTime)

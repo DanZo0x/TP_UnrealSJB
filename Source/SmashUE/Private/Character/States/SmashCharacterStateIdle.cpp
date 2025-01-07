@@ -5,6 +5,7 @@
 
 #include "Character/SmashCharacter.h"
 #include "Character/SmashCharacterStateMachine.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 ESmashCharacterStateID USmashCharacterStateIdle::GetStateID()
 {
@@ -48,4 +49,12 @@ void USmashCharacterStateIdle::OnInputMoveXFast(float InputMoveX)
 void USmashCharacterStateIdle::OnInputJump(float InputMoveY)
 {
 	StateMachine->ChangeState(ESmashCharacterStateID::Jump);
+	
+	UCharacterMovementComponent* MovementComponent = Character->GetCharacterMovement();
+	if (!IsValid(MovementComponent)) return;
+	
+	if (!MovementComponent->IsFalling())
+	{
+		StateMachine->ChangeState(ESmashCharacterStateID::Jump);
+	}
 }

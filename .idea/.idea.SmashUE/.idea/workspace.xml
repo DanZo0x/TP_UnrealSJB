@@ -10,9 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6107f52-88b5-455e-a516-7b5e01d2434b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraWorldSubsystem.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Camera/CameraWorldSubsystem.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateFall.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateFall.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateIdle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateIdle.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateJump.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateJump.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateJump.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateJump.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateFall.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateFall.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +54,33 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.3/Engine/Plugins/AI/MLAdapter/Source/MLAdapter/Private/Actuators/MLAdapterActuator_EnhancedInput.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/SmashUE/UHT/SmashCharacter.gen.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />

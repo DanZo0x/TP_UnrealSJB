@@ -24,6 +24,8 @@ public:
 #pragma region Fall Variables
 
 protected:
+	void Fall(float inFallHorizontalMoveSpeed, float inFallAirControl, float inFallGravityScale, float inFallFastGravityScale) const;
+	
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Jump")
 	float FallHorizontalMoveSpeed = 400.0f;
 
@@ -31,9 +33,9 @@ protected:
 	float FallAirControl = 1.0f;
 
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Jump")
-	float FallGravityScale = 3.0f;
+	float FallGravityScale = 1.0f;
 
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Smash Character State Jump")
-	float FallFastGravityScale = 10.0f;
+	float FallFastGravityScale = 2.0f;
 #pragma  endregion
 };
