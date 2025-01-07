@@ -167,3 +167,13 @@ void ASmashCharacter::OnInputJump(const FInputActionValue& InputActionValue)
 	InputMoveY = InputActionValue.Get<float>();
 	InputMoveYPressEvent.Broadcast(InputMoveY);
 }
+
+FVector ASmashCharacter::GetFollowPosition()
+{
+	return GetActorLocation();
+}
+
+bool ASmashCharacter::IsFollowable()
+{
+	return true;
+}

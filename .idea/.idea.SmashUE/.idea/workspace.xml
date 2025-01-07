@@ -10,14 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6107f52-88b5-455e-a516-7b5e01d2434b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraWorldSubsystem.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Camera/CameraWorldSubsystem.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraFollowTarget.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Camera/CameraFollowTarget.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraWorldSubsystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraWorldSubsystem.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/SmashCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateFall.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateFall.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateIdle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateIdle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateJump.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Character/States/SmashCharacterStateJump.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateFall.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/States/SmashCharacterStateFall.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Camera/CameraWorldSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Camera/CameraWorldSubsystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Character/SmashCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -3,6 +3,8 @@
 
 #include "Camera/CameraWorldSubsystem.h"
 
+#include "Camera/CameraFollowTarget.h"
+#include "Character/SmashCharacter.h"
 #include "Kismet/GameplayStatics.h"
 
 void UCameraWorldSubsystem::PostInitialize()
@@ -22,12 +24,12 @@ void UCameraWorldSubsystem::Tick(float DeltaTime)
 	TickUpdateCameraPosition(DeltaTime);
 }
 
-void UCameraWorldSubsystem::AddFollowTarget(AActor* FollowTarget)
+void UCameraWorldSubsystem::AddFollowTarget(UObject* FollowTarget)
 {
 	FollowTargets.Add(FollowTarget);
 }
 
-void UCameraWorldSubsystem::RemoveFollowTarget(AActor* FollowTarget)
+void UCameraWorldSubsystem::RemoveFollowTarget(UObject* FollowTarget)
 {
 	if (FollowTargets.Contains(FollowTarget))
 	{
@@ -57,11 +59,11 @@ FVector UCameraWorldSubsystem::CalculateAveragePositionBetweenTargets()
 	FVector AveragePosition = FVector::ZeroVector;
 	int CheckedTargets = 0;
 	
-	for (AActor* Target : FollowTargets)
+	for (UObject* Target : FollowTargets)
 	{
-		if (IsValid(Target))
+		if (IsValid(Target) && FollowTargets[CheckedTargets]->GetClass()->ImplementsInterface(UCameraFollowTarget::StaticClass()) && Cast<ASmashCharacter>(FollowTargets[CheckedTargets])->IsFollowable())
 		{
-			AveragePosition += Target->GetActorLocation();
+			AveragePosition += Cast<ASmashCharacter>(FollowTargets[CheckedTargets])->GetFollowPosition();
 			CheckedTargets++;
 		}
 	}
