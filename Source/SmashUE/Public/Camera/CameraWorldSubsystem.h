@@ -31,18 +31,27 @@ public:
 
 	void RemoveFollowTarget(UObject* FollowTarget);
 
+protected:
+
 	UPROPERTY()
 	TArray<UObject*> FollowTargets;
+
+	FVector CalculateAveragePositionBetweenTargets();
+
+	float CalculateGreatestDistanceBetweenTargets();
 
 #pragma endregion
 
 #pragma region Main Camera
+	
 protected:
 	UPROPERTY()
 	TObjectPtr<UCameraComponent> CameraMain;
 
-	UCameraComponent* FindCameraByTag(const FName& Tag) const;
+	void TickUpdateCameraPosition(float DeltaTime);
 
+	void TickUpdateCameraZoom(float DeltaTime);
+	
 #pragma endregion
 
 #pragma region Misc
@@ -50,9 +59,7 @@ protected:
 	UPROPERTY(EditAnywhere)
 	float CameraLerpSpeed = 5.0f;
 
-	void TickUpdateCameraPosition(float DeltaTime);
-
-	FVector CalculateAveragePositionBetweenTargets();
+	UCameraComponent* FindCameraByTag(const FName& Tag) const;
 
 #pragma endregion
 
@@ -78,4 +85,23 @@ protected:
 
 	FVector CalculateWorldPositionFromViewportPosition(const FVector2D& ViewportPosition);
 	
+#pragma endregion
+
+#pragma region Zoom
+
+	UPROPERTY()
+	float CameraZoomYMin = 0.0f;
+
+	UPROPERTY()
+	float CameraZoomYMax = 0.0f;
+
+	UPROPERTY()
+	float CameraZoomDistanceBetweenTargetsMin = 300.0f;
+
+	UPROPERTY()
+	float CameraZoomDistanceBetweenTargetsMax = 1500.0f;
+
+	UFUNCTION()
+	void InitCameraZoomParameters();
+#pragma endregion
 };
